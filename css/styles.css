@@ -1,0 +1,64 @@
+.forms {
+  margin-top: 76px;
+}
+.input-fields-header {
+	color: #000000;
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+.container {
+  width: 353px;
+}
+
+hr {
+	border: 0.5px solid #000000;
+  margin-top: 0;
+}
+
+
+label {
+	height: 14px;
+	width: 255px;
+	color: #001CFF;
+	font-family: Arial;
+	font-size: 12px;
+  spacing: 14px;
+	line-height: 14px;
+}
+
+input[type="text"] {
+  font-family: 'Avalon', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  font-weight: 300;
+}
+
+
+
+
+
+.header {
+
+}
+
+.form-title-large {
+
+}
+
+.form-title-small {
+
+}
+
+.textbox-header {
+  color: #001CFF;
+  font-size: 12px;
+  font-family: Arial;
+}
+
+.textbox-content {
+
+}
