@@ -14,7 +14,9 @@
 }
 
 .textbox:focus ~ .floating-label-placeholder,
-.textbox:not(:focus):valid ~ .floating-label-placeholder
+.textarea-box:focus ~ .floating-label-placeholder,
+.textbox:not(:focus):valid ~ .floating-label-placeholder,
+.textarea-box:not(:focus):valid ~ .floating-label-placeholder
 {
   top: 6px;
   left: 10px;
@@ -27,6 +29,11 @@
   font-size: 16px;
   width: 355px;
   height: 45px;
+}
+
+.textarea-box {
+  font-size: 16px;
+  width: 355px;
 }
 
 .textbox-date {
@@ -42,7 +49,7 @@
 }
 
 .textbox-date:focus ~ label, .textbox-date:not(:placeholder-shown) ~ label {
-  top: -10px;
+  top: 6px;
   font-size: 11px;
 }
 
@@ -72,10 +79,6 @@
   transition: 0.3s ease all;
 }
 
-.dob-placeholder {
-  display: inline;
-}
-
 hr {
 	border: 0.5px solid #000000;
   margin-top: 0;
@@ -83,9 +86,10 @@ hr {
   margin-bottom: 24.5px;
 }
 
-label {
+label.main-label {
   font-family: 'Avalon', Arial, sans-serif;
   font-size: 11px;
+  color: #000;
 }
 
 .row {
@@ -109,8 +113,6 @@ label {
   display: inline-block;
 }
 
-/*https://codepen.io/anon/pen/RLedgE*/
-
 .floating-date {
   position: relative;
   display: inline-block;
@@ -121,8 +123,8 @@ label {
 }
 
 .floating-date > label {
-  left:5px;
-  top:5px;
+  left: 10px;
+  top: 12px;
   transition:0.2s ease all;
   pointer-events: none;
   position: absolute;
@@ -132,8 +134,7 @@ label {
 }
 
 
-
-input, textarea {
+input {
   display: block;
   color: #000000;
   outline: none;
@@ -143,8 +144,17 @@ input, textarea {
 }
 
 textarea {
+  display: block;
+  font-size: 16px;
+  font-family: 'Avalon', Arial, sans-serif;
+  color: #000000;
+  min-width: 355px;
+  max-width: 355px;
+  width: 355px;
   resize: none;
   overflow: hidden;
+  outline: none;
+  padding: 22px 10px 14px 10px;
 }
 
 input:focus,

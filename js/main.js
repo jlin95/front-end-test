@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // for email validation
   $("#form").validate({
     rules: {
       email: {
@@ -14,14 +15,15 @@ $(document).ready(function () {
     },
 
   });
-
-  $('#credit-card').on('keypress change', function () {
+  // for the expandable input for multiine box
+  $('textarea').on('input', function() {
+    $(this).outerHeight(20).outerHeight(this.scrollHeight);
+  });
+  $('textarea').trigger('input');
+  // for credit card input
+  $('#credit-card').on('keydown', function () {
     $(this).val(function (index, value) {
     	  return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
       });
     });
   });
-
-
-
-// });
