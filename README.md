@@ -9,5 +9,5 @@ Test for form validation.
 
 4. index.html for main page. 
 
-
+To run locally, use python -m SimpleHTTPServer and navigate to localhost:8000. Best viewed on Chrome or Mozilla :D
   
