@@ -17,7 +17,7 @@ $(document).ready(function () {
   });
   // for the expandable input for multiine box
   $('textarea').on('input', function() {
-    $(this).outerHeight(20).outerHeight(this.scrollHeight);
+    $(this).outerHeight(14).outerHeight(this.scrollHeight);
   });
   $('textarea').trigger('input');
   // for credit card input
