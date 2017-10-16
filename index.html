@@ -16,48 +16,63 @@
       <hr>
     </div>
 
-    <form>
-      <div class="form-group">
-        <label class="control-label" for="inputDefault">Empty field</label>
-        <input type="text" class="form-control" id="inputDefault" placeholder="Name">
+    <form id="form" action="">
+
+      <div class="row">
+        <input id="name" type="text" class="textbox"  required/>
+        <span class="floating-label-placeholder">Name</span>
       </div>
 
-      <div class="form-group">
-        <label class="control-label" for="inputDefault">Typing field</label>
-        <input type="text" class="form-control" id="inputDefault">
+      <div class="row">
+        <textarea class="textbox autoExpand" id="large-text" required></textarea>
+        <span class="floating-label-placeholder">Name (Multi-line)</span>
       </div>
 
-      <div class="form-group">
-        <label class="control-label" for="inputDefault">Filled field</label>
-        <input type="text" class="form-control" id="inputDefault" value="Flora Wong">
+      <div class="row email-validation">
+        <input type="text" class="textbox" id="email" name="email" required/>
+        <span class="floating-label-placeholder">Email</span>
+
       </div>
 
-      <div class="form-group">
-        <label class="control-label" for="inputLarge">Input field with multiple lines</label>
-        <input class="form-control" type="text" id="inputLarge" value="Flora Wong has written a really long product review and this extends to many many lines such as this paragraph that you are reading now. KC also just broke ZY’s umbrella as I type. Hello, welcome to Sephora!">
+      <div class="row">
+        <input class="textbox" type="text" id="credit-card" required/>
+        <span class="floating-label-placeholder">Credit Card</span>
       </div>
 
-      <div class="form-group has-error">
-        <label class="control-label" for="inputError">Validation</label>
-        <input type="text" class="form-control" id="inputError">
-        <span class="help-block" for="inputError">Error: Please enter a valid email address.</span>
+      <div class="row-date">
+        <div id="dob">
+          <label>Date of Birth</label>
+          <br>
+          <div class="floating-date">
+            <input class="textbox-date" type="text" id="dob" placeholder=" "/>
+            <label>DD</label>
+          </div>
+          <div class="floating-date">
+            <input class="textbox-date" type="text" id="dob" placeholder=" " />
+            <label>MM</label>
+          </div>
+          <div class="floating-date">
+            <input class="textbox-date year" type="text" id="dob" placeholder=" " />
+            <label>YYYY</label>
+          </div>
+        </div>
+
+        <div id="exp-date">
+          <label>Expiry Date</label>
+          <br>
+          <input class="textbox-date" type="text" id="expiry-date" />
+           /
+          <input class="textbox-date" type="text" id="expiry-date" />
+
+        </div>
+
       </div>
 
-      <div class="form-group">
-        <input type="text" class="form-control" id="inputDefault">
-      </div>
-
-      <div class="form-group">
-        <label class="control-label" for="inputDefault">Input field with auto-formatted spaces</label>
-        <input type="text" class="form-control" id="inputDefault" value="1234 2345 2343 2343">
-      </div>
-
-      <div class="form-group">
-        <label class="control-label" for="inputDefault">Date fields</label>
-        <input type="text" class="form-control" id="inputDefault" value="1234 2345 2343 2343">
-      </div>
     </form>
-
   </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -10,55 +10,192 @@
 }
 
 .container {
-  width: 353px;
+  width: 355px;
+}
+
+.textbox:focus ~ .floating-label-placeholder,
+.textbox:not(:focus):valid ~ .floating-label-placeholder
+{
+  top: 6px;
+  left: 10px;
+  font-size: 11px;
+  color: #AAAAAA;
+  font-family: 'Avalon', Arial, sans-serif;
+}
+
+.textbox {
+  font-size: 16px;
+  width: 355px;
+  height: 45px;
+}
+
+.textbox-date {
+  font-size: 16px;
+  width: 50px;
+  height: 45px;
+  margin-right: 9px;
+  display: inline-block;
+}
+
+.textbox-date:focus {
+  outline: none;
+}
+
+.textbox-date:focus ~ label, .textbox-date:not(:placeholder-shown) ~ label {
+  top: -10px;
+  font-size: 11px;
+}
+
+#exp-date > .textbox-date {
+  margin-left: 7px;
+  margin-right: 10px;
+}
+
+.date {
+  display: inline-block;
+  margin-right: 32px;
+}
+
+.year {
+  width: 70px;
+}
+
+.floating-label-placeholder {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 12px;
+  color: #AAAAAA;
+  font-family: 'Avalon', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  transition: 0.3s ease all;
+}
+
+.dob-placeholder {
+  display: inline;
 }
 
 hr {
 	border: 0.5px solid #000000;
   margin-top: 0;
+  width: 353px;
+  margin-bottom: 24.5px;
 }
-
 
 label {
-	height: 14px;
-	width: 255px;
-	color: #001CFF;
-	font-family: Arial;
-	font-size: 12px;
-  spacing: 14px;
-	line-height: 14px;
-}
-
-input[type="text"] {
   font-family: 'Avalon', Arial, sans-serif;
+  font-size: 11px;
+}
+
+.row {
+  position: relative;
+  padding-bottom: 15px;
+  margin-left: 0px;
+}
+
+#dob {
+  display: inline-block;
+  float: left;
+}
+
+#exp-date {
+  display: inline-block;
+  float: right;
+}
+
+.row-date {
+  width: 355px;
+  display: inline-block;
+}
+
+/*https://codepen.io/anon/pen/RLedgE*/
+
+.floating-date {
+  position: relative;
+  display: inline-block;
+}
+
+.floating-date:focus {
+  border: 0.5px solid #000;
+}
+
+.floating-date > label {
+  left:5px;
+  top:5px;
+  transition:0.2s ease all;
+  pointer-events: none;
+  position: absolute;
   font-size: 16px;
-  line-height: 19px;
+  font-family: 'Avalon', Arial, sans-serif;
+  color: #AAAAAA;
+}
+
+
+
+input, textarea {
+  display: block;
   color: #000000;
-  font-weight: 300;
+  outline: none;
+  font-size: 16px;
+  padding: 19px 10px 5px 10px;
+  font-family: 'Avalon', Arial, sans-serif;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+input:focus,
+textarea:focus {
+  border: 0.5px solid #000;
+}
+
+input[name='email']:focus:invalid  {
+  border: 0.5px solid #EE0000;
+  color: #EE0000;
+}
+
+input[name='email']:focus:invalid {
+  border: 0.5px solid #EE0000;
+  background-image: url('/img/error.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: right 10px top 10px;
+}
+
+input.textbox.error[name="email"] {
+  color: #000;
+  font-size: 16px;
+  background-image: url('/img/error.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: right 10px top 10px;
+}
+
+input.textbox.valid[name="email"] {
+  border: 0.5px solid #AAAAAA;
+  background-image: url('/img/tick.png');
+  background-repeat: no-repeat;
+  background-size: 14.03px 9.5px;
+  background-position: right 14px top 18px;
 }
 
 
-
-
-
-.header {
+.textbox.error:focus  ~ span.floating-label-placeholder {
+  color: #EE0000;
 
 }
-
-.form-title-large {
-
+.textbox.error:focus, .textbox.error:not(:focus) {
+  color: #000000;
+  border: 0.5px solid #EE0000;
 }
 
-.form-title-small {
-
-}
-
-.textbox-header {
-  color: #001CFF;
+.error {
+  position: relative;
+  display: inline-block;
+  font-family: 'Avalon', Arial, sans-serif;
+  color: #EE0000;
   font-size: 12px;
-  font-family: Arial;
-}
-
-.textbox-content {
-
 }
